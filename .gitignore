@@ -35,3 +35,6 @@ ips_and_ranges.txt
 # Operating System
 .DS_Store
 Thumbs.db 
+
+ips_and_ranges.txt
+ip_details.csv

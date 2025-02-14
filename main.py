@@ -5,6 +5,7 @@ import requests
 import csv
 from dotenv import load_dotenv
 import os  
+import socket
 
 def main():
     import ipaddress
@@ -41,7 +42,11 @@ def main():
 
         with open('ip_details.csv', mode='a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([data.get('ip'), data.get('hostname'), data.get('city'), data.get('region'), data.get('country'), data.get('loc'), data.get('org'), data.get('postal'), data.get('timezone')])
+            writer.writerow([
+                data.get('ip'), data.get('hostname'), data.get('city'), 
+                data.get('region'), data.get('country'), data.get('loc'), 
+                data.get('org'), data.get('postal'), data.get('timezone')
+            ])
 
 
 if __name__ == "__main__":
