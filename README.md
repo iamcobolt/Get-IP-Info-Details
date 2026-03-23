@@ -53,4 +53,5 @@ The script will create or append to a file named `ip_details.csv` in the same di
 ## Notes
 
 - Ensure your IPinfo API token is valid and has sufficient permissions to fetch the required data.
-- The script loads the environment variables for each IP request, which might be optimized by loading them once at the start.
+- The script will stop immediately with a clear error if `IPINFO_API_TOKEN` is not set in the environment or a `.env` file.
+- The script loads the environment variables once at startup before processing IPs.
