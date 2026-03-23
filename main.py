@@ -40,6 +40,10 @@ def main():
     # Load environment variables once
     load_dotenv()
     token = os.getenv('IPINFO_API_TOKEN')
+    if not token:
+        raise RuntimeError(
+            "Missing IPINFO_API_TOKEN. Set it in the environment or in a .env file."
+        )
 
     with open('ips_and_ranges.txt', 'r') as file:
         lines = file.readlines()
